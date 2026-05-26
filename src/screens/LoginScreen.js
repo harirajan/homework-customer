@@ -35,7 +35,12 @@ export default function LoginScreen({ navigation }) {
 
       const { token, user } = response.data.data;
       await login(user, token);
-      navigation.replace("Home");
+      // Route based on role
+      if (user.role === "WORKER") {
+        navigation.replace("WorkerHome");
+      } else {
+        navigation.replace("Home");
+      }
     } catch (err) {
       Alert.alert("Error", err.response?.data?.message || "Login failed");
     } finally {
