@@ -14,6 +14,7 @@ import WorkerBookingsScreen from "./src/screens/WorkerBookingsScreen";
 import WorkerBookingDetailScreen from "./src/screens/WorkerBookingDetailScreen";
 import WorkerActiveJobScreen from "./src/screens/WorkerActiveJobScreen";
 import ReviewScreen from "./src/screens/ReviewScreen";
+import WorkerReviewsScreen from "./src/screens/WorkerReviewsScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -91,6 +92,11 @@ function AppNavigator() {
         name="Review"
         component={ReviewScreen}
         options={{ title: "Leave a Review" }}
+      />
+      <Stack.Screen
+        name="WorkerReviews"
+        component={WorkerReviewsScreen}
+        options={{ title: "My Reviews" }}
       />
     </Stack.Navigator>
   );
