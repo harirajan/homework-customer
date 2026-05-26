@@ -7,6 +7,8 @@ import SearchWorkersScreen from "./src/screens/SearchWorkersScreen";
 import WorkerProfileScreen from "./src/screens/WorkerProfileScreen";
 import CreateBookingScreen from "./src/screens/CreateBookingScreen";
 import MyBookingsScreen from "./src/screens/MyBookingsScreen";
+import RegisterScreen from "./src/screens/RegisterScreen";
+import BookingDetailScreen from "./src/screens/BookingDetailScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -44,6 +46,16 @@ export default function App() {
             name="MyBookings"
             component={MyBookingsScreen}
             options={{ title: "My Bookings" }}
+          />
+          <Stack.Screen
+            name="Register"
+            component={RegisterScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="BookingDetail"
+            component={BookingDetailScreen}
+            options={{ title: "Booking Detail" }}
           />
         </Stack.Navigator>
       </NavigationContainer>
